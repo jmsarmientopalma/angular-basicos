@@ -4,6 +4,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ContadorModule } from './contador/contador.module';
+import { DbzModule } from './dbz/dbz.module';
+import { DbzService } from './dbz/services/dbz.service';
 import { HeoresModule } from './heroes/heroes.module';
 
 @NgModule({
@@ -14,9 +16,12 @@ import { HeoresModule } from './heroes/heroes.module';
     BrowserModule,
     AppRoutingModule,
     ContadorModule,
-    HeoresModule
+    HeoresModule,
+    DbzModule
   ],
-  providers: [],
+  providers: [
+    DbzService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
